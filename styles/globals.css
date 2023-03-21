@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-    .polygon-clip-path {
-        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    .circle-0-clip-path {
+        clip-path: circle(0% at 50% 50%);
+    }
+
+    .circle-100-clip-path {
+        clip-path: circle(100% at 50% 50%);
     }
 }
