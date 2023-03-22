@@ -1,12 +1,14 @@
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
+import { listPage } from "./assets/listPage";
 
 var centerAnimation = gsap.timeline({ paused: true });
 var cardAnimation = gsap.timeline({ paused: true });
 var cardToggle = gsap.timeline({ paused: true });
+var listPageLength = listPage.length;
 
 function setZIndex(id: any) {
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < listPageLength; i++) {
         if (`card-${i}` === `card-${id}`) {
             document.getElementById(`card-${i}`)?.classList.add('z-50');
         } else {
@@ -54,7 +56,7 @@ function animateCardToggle(id: any, isReverse: boolean, isSmall?: boolean) {
 function animateCardLayer(id: any, isReverse: boolean) {
     if (!isReverse) {
         cardAnimation.add(gsap.to(`#layer1-${id}`, {
-            x: -384,
+            x: -388,
             duration: 0.3,
             delay: 0.2,
             ease: 'power1.out'

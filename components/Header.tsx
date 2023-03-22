@@ -1,15 +1,14 @@
 import localFont from "next/font/local"
-import { ReactNode } from "react"
-const font = localFont({src: '../assets/font/PermanentMarker-Regular.ttf'})
+const font = localFont({ src: '../assets/font/PermanentMarker-Regular.ttf' })
 
-function Header({children, title}: {children: ReactNode, title: string}) {
+function Header() {
     return (
         <div className={`w-full flex flex-col gap-2 pb-8 text-center ${font.className}`}>
             <p className="text-6xl text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
-                {title}
+                Clone List
             </p>
             <span className="text-xs font-medium text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-blue-600">
-                {children}
+                list of design i transform into code <br /> (mostly landing page)
             </span>
         </div>
     )
