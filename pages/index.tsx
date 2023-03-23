@@ -65,6 +65,7 @@ export default function Home() {
                 id={`card-body-${col1.id}`}
                 title={col1.title}
                 subTitle={col1.subtitle}
+                link={col1.link}
                 className="left-96"
               />
               <CardLayer id={col1.id} onClick={() => showImage(col1.id)} className="left-96" />
@@ -87,6 +88,7 @@ export default function Home() {
                 id={`card-body-${col2.id}`}
                 title={col2.title}
                 subTitle={col2.subtitle}
+                link={col2.link}
                 className="left-96"
               />
               <CardLayer id={col2.id} onClick={() => showImage(col2.id)} className="left-96" />
@@ -109,6 +111,7 @@ export default function Home() {
                 id={`card-body-${col3.id}`}
                 title={col3.title}
                 subTitle={col3.subtitle}
+                link={col3.link}
                 className="left-96"
               />
               <CardLayer id={col3.id} onClick={() => showImage(col3.id)} className="left-96" />

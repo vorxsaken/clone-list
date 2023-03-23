@@ -1,16 +1,18 @@
 import { ReactEventHandler } from "react"
 import Button from "./Button"
 import { BiWindowClose } from 'react-icons/bi'
+import Link from "next/link"
 
 interface cardBody {
     id?: string,
     title: string,
     subTitle: string,
     onClick?: ReactEventHandler,
+    link: string,
     className?: string
 }
 
-function CardBody({ id, title, subTitle, onClick, className }: cardBody) {
+function CardBody({ id, title, subTitle, onClick, className, link }: cardBody) {
     return (
         <div id={id} className={`w-full h-full px-4 py-4 flex flex-col gap-2 bg-white absolute z-10 
         justify-start items-start overflow-y-auto ${className}`}>
@@ -25,7 +27,9 @@ function CardBody({ id, title, subTitle, onClick, className }: cardBody) {
                 {subTitle}
             </p>
             <div className="w-64 lg:w-80 mt-2 flex justify-center">
-                <Button> Visit </Button>
+                <Link href={link} target={'_blank'}>
+                    <Button> Visit </Button>
+                </Link>
             </div>
         </div>
     )

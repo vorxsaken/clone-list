@@ -38,7 +38,7 @@ function getRelativePosition(id: any) {
 function animateCardToggle(id: any, isReverse: boolean, isSmall?: boolean) {
     if (!isReverse) {
         cardToggle.add(gsap.to(`#cardToggle-${id}`, {
-            x: isSmall ? -75 : -20,
+            x: isSmall ? -60 : -20,
             delay: 0.5,
             duration: 0.3,
             ease: 'power1.out'

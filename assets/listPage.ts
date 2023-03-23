@@ -10,6 +10,7 @@ export const listPage =
             title: 'Fitness Landing Page',
             subtitle: `This is landing page i get from dribble, you can check the original design from this url :
             https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design`,
+            link: '/fitness',
             image: fittness
         },
         {
@@ -17,6 +18,7 @@ export const listPage =
             title: 'Fitness Landing Page',
             subtitle: `This is landing page i get from dribble, you can check the original design from this url :
             https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            link: '/',
             image: butusic
         },
         {
@@ -24,6 +26,7 @@ export const listPage =
             title: 'Fitness Landing Page',
             subtitle: `This is landing page i get from dribble, you can check the original design from this url :
             https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            link: '/',
             image: chainCast
         },
         {
@@ -31,6 +34,7 @@ export const listPage =
             title: 'Fitness Landing Page',
             subtitle: `This is landing page i get from dribble, you can check the original design from this url :
             https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            link: '/',
             image: hive
         }
     ]
