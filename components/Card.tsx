@@ -13,7 +13,7 @@ function Card({ children, id, onClick, className }: card ) {
             <div
                 id={id}
                 onClick={onClick}
-                className={`w-full h-auto md:max-w-sm md:max-h-[220px] flex flex-col 
+                className={`w-full h-auto md:max-w-sm md:min-h-[180px] flex flex-col 
                 rounded-lg overflow-hidden shadow-xl bg-white relative ${className}`} 
             >
                 {children}

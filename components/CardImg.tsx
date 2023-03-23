@@ -11,7 +11,7 @@ interface cardImg {
 function CardImg({src, onClick, className, id}: cardImg) {
     return (
         <div className={`w-full z-0 ${className}`} onClick={onClick}>
-            <Image src={src} id={`card-img-${id}`} width={500}  alt="preview image" className="object-cover" />
+            <Image src={src} id={`card-img-${id}`} className='object-fill' alt="preview image" />
         </div>
     )
 }

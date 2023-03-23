@@ -18,7 +18,7 @@ function CardBody({ id, title, subTitle, onClick, className }: cardBody) {
                 <BiWindowClose className="cursor-pointer transition-all duration-300 ease-in-out 
                 float-right hover:scale-110" onClick={onClick} />
             </p>
-            <p className=" text-[0.8rem] lg:text-md font-bold text-slate-800 text-start w-[17rem] lg:w-[19rem]">
+            <p className=" text-[0.8rem] lg:text-2xl font-extrabold text-slate-800 text-start w-[17rem] lg:w-[22rem]">
                 {title}
             </p>
             <p className="text-[0.6rem] lg:text-[0.6rem] text-slate-500 text-justify lg:text-start w-[17rem] lg:w-[19rem]">
