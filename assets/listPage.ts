@@ -1,25 +1,36 @@
-import image1 from './image/image 3.png';
-import image2 from './image/image 1.jpg';
-import image3 from './image/image 2.png';
+import fittness from './image/fitness.webp';
+import butusic from '../assets/image/Butusic.webp';
+import chainCast from '../assets/image/chaincast.webp';
+import hive from '../assets/image/hive.webp';
 
 export const listPage =
     [
         {
-            title: 'this is heading 1',
-            subtitle: `this is subtitle 1 this is subtitle 1 this is subtitle 1 this is subtitle 1 this is subtitle 1 
-            this is subtitle 1 this is subtitle 1 this is subtitle 1 this is subtitle 1 this is subtitle 1 this is subtitle 1 `,
-            image: image1
+            id: 0,
+            title: 'Fitness Landing Page',
+            subtitle: `This is landing page i get from dribble, you can check the original design from this url :
+            https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design`,
+            image: fittness
         },
         {
-            title: 'this is heading 2',
-            subtitle: `this is heading 2 this is heading 2 this is heading 2 this is heading 2 this is heading 2 this is heading 2 
-            this is heading 2 this is heading 2 this is heading 2 this is heading 2 this is heading 2 `,
-            image: image2
+            id: 1,
+            title: 'Fitness Landing Page',
+            subtitle: `This is landing page i get from dribble, you can check the original design from this url :
+            https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            image: butusic
         },
         {
-            title: 'this is heading 2',
-            subtitle: `this is subtitle 3 this is subtitle 3 this is subtitle 3 this is subtitle 3 this is subtitle 3 this is subtitle 3 
-            this is subtitle 3 this is subtitle 3 this is subtitle 3 this is subtitle 3 this is subtitle 3 `,
-            image: image3
+            id: 2,
+            title: 'Fitness Landing Page',
+            subtitle: `This is landing page i get from dribble, you can check the original design from this url :
+            https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            image: chainCast
+        },
+        {
+            id: 3,
+            title: 'Fitness Landing Page',
+            subtitle: `This is landing page i get from dribble, you can check the original design from this url :
+            https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design ( soon )`,
+            image: hive
         }
     ]
