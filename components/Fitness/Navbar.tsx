@@ -8,7 +8,7 @@ function Navbar() {
         <div className="flex justify-center items-center">
             <Image src={Logo} alt="fitness logo" />
         </div>
-        <div className="flex flex-row gap-6 font-extralight">
+        <div className="text-sm flex flex-row gap-6 font-extralight">
             <span className="cursor-pointer hover:text-yellow-300 transition-all duration-300 ease-in-out">Home</span>
             <span className="cursor-pointer hover:text-yellow-300 transition-all duration-300 ease-in-out">About Us</span>
             <span className="cursor-pointer hover:text-yellow-300 transition-all duration-300 ease-in-out">Program & Services</span>

@@ -12,8 +12,8 @@ function Fitness() {
             <Navbar />
             <div className='w-full h-full'>
                 <div className='w-full h-full relative z-10'>
-                    <div className='w-[750px] h-full flex flex-col gap-8 justify-center items-start absolute left-60'>
-                        <div className={`text-8xl font-extrabold text-white z-20 ${Alfa.className}`}>
+                    <div className='w-[750px] h-full flex flex-col gap-8 justify-center items-start absolute left-72'>
+                        <div className={`text-7xl font-extrabold text-white z-20 ${Alfa.className}`}>
                             GET FIT, STAY HEALTHY&nbsp;
                             <span className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-500'>
                                 FEEL<br />
@@ -32,7 +32,7 @@ function Fitness() {
                         </div>
                     </div>
                     <div className='w-1/3 h-full absolute right-60'>
-                        <Image src={Runman} alt="Running man" className='w-[600px] h-[710px] absolute top-20' />
+                        <Image src={Runman} alt="Running man" className='w-[500px] h-[600px] absolute top-20' />
                     </div>
                 </div>
                 <div className='absolute right-60 top-52 w-[400px] h-[400px] bg-yellow-600 rounded-full blur-[200px] z-0'>

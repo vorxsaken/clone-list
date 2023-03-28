@@ -10,4 +10,12 @@
     .circle-100-clip-path {
         clip-path: circle(100% at 50% 50%);
     }
+
+    .clip-transparent {
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+    }
+
+    .clip-not-transparent {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 }
