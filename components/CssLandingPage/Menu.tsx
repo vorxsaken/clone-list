@@ -17,7 +17,7 @@ export default function Menu({ height }: { height: string }) {
             ease: 'power2.inOut'
         })
     }
-
+    
     return (
         <Card padding="px-8 py-8" gap="gap-24" height={height}>
             <div id="circleRadio" className="w-10 h-10 rounded-full border border-slate-100 border-opacity-30 absolute right-6 
@@ -30,7 +30,7 @@ export default function Menu({ height }: { height: string }) {
             <div id="container" className="flex flex-col gap-5">
                 {
                     menus.map((menu, index) => (
-                        <div id={`menu-${index}`} onMouseOver={() => hoverCircle(index)} 
+                        <div key={index} id={`menu-${index}`} onMouseOver={() => hoverCircle(index)} 
                         className="uppercase text-white text-2xl cursor-pointer hover:text-purple-400">
                             { menu }
                         </div>

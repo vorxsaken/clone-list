@@ -10,7 +10,7 @@ interface card {
     flex?: boolean,
     center?: boolean,
     gap?: string,
-    padding?: string
+    padding?: string,
 }
 
 export default function Card({ children, width, background, border, row, height, flex, center, gap, padding}: card) {
