@@ -1,21 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Mono+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center gap-4
+  }
+
+  .flex-start {
+    @apply flex justify-start items-start
+  }
+
+  .flex-end {
+    @apply flex justify-end items-end
+  }
+
+  .flex-between {
+    @apply flex justify-between items-start
+  }
+
+  .title {
+    @apply text-2xl md:text-3xl font-extrabold
+  }
+
+  .subtitle {
+    @apply text-xs md:text-sm font-light
+  }
+
+  .perspective-3d {
+    perspective: 1000px;
+  }
+
+  .rotate-x-30 {
+    transform: rotateX(60deg);
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(-10deg);
+    }
+
+    50% {
+      transform: rotate(10deg);
+    }
+
+    75% {
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s infinite;
+  }
+  
+  .gray-filter {
+    filter: grayscale(100%);
+  }
+
+  .gradient-bottom-card {
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(60deg,  white, white, white, white, #fcf3b3, #ffd4ff, #cfedff) var(--x, 0)/200%;
+    background-repeat: no-repeat;
+  }
+
+  .gradient-bottom-card:hover {
+    --x: 100%;
+  }
+}
+
 @layer utilities {
-    .circle-0-clip-path {
-        clip-path: circle(0% at 50% 50%);
-    }
+  .circle-0-clip-path {
+    clip-path: circle(0% at 50% 50%);
+  }
 
-    .circle-100-clip-path {
-        clip-path: circle(100% at 50% 50%);
-    }
+  .circle-100-clip-path {
+    clip-path: circle(100% at 50% 50%);
+  }
 
-    .clip-transparent {
-        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
-    }
+  .clip-transparent {
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+  }
 
-    .clip-not-transparent {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  .clip-not-transparent {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }

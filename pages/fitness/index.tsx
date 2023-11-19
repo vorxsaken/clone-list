@@ -2,43 +2,48 @@ import React from 'react'
 import Navbar from '@/components/Fitness/Navbar'
 import Image from 'next/image'
 import Runman from '../../assets/Fitness/runman.png';
-import { Bungee } from 'next/font/google'
 import Button from '@/components/Fitness/Button';
-const Alfa = Bungee({ weight: '400', subsets: ['latin'] })
+import Head from 'next/head';
 
 function Fitness() {
     return (
-        <div className='w-screen h-screen bg-brown-600'>
-            <Navbar />
-            <div className='w-full h-full'>
-                <div className='w-full h-full relative z-10'>
-                    <div className='w-[750px] h-full flex flex-col gap-8 justify-center items-start absolute left-72'>
-                        <div className={`text-7xl font-extrabold text-white z-20 ${Alfa.className}`}>
-                            GET FIT, STAY HEALTHY&nbsp;
-                            <span className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-500'>
-                                FEEL<br />
+        <>
+            <header>
+                <Head>
+                    <title>Fitness | Mock Ups</title>
+                </Head>
+                <Navbar />
+            </header>
+            <main>
+                <div className='w-full h-screen md:h-[140vh] mt-16'>
+                    <div className='w-full h-full flex justify-center items-start bg-brown-600'>
+                        <div className='w-[85%] h-auto py-10 mt-16 flex-start flex-col gap-8 z-20 rounded-xl md:w-[650px] md:justify-center md:items-start
+                        relative md:absolute md:left-72 '>
+                            <span className='text-5xl font-bungee md:text-7xl md:font-extrabold text-white'>
+                                {`GET FIT, STAY HEALTHY `}
+                                <span className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-green-500'>
+                                    FEEl GREAT
+                                </span>
                             </span>
-                            <span className='text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-500'>
-                                GREAT
+                            <span className='text-sm md:text-lg text-white'>
+                                {`Welcome to our fitness community where you can achieve your goals with 
+                                our world-class programs, trainers, and facilities.`}
                             </span>
+                            <div className='flex flex-row gap-4'>
+                                <Button>Join Now</Button>
+                                <Button fill={false}>Our Services</Button>
+                            </div>
                         </div>
-                        <div className='text-white'>
-                            Welcome to our fitness community where you can achieve your goals with <br /> our world-class programs, trainers,
-                            and facilities. 
+                        <div className='w-full md:w-[40%] h-full md:h-[120vh] absolute opacity-60 md:opacity-100 md:right-48 md:top-10 md:z-10'>
+                            <Image src={Runman} alt="Running man" fill className='md:w-[500px] md:h-[600px] md:object-none object-cover' />
                         </div>
-                        <div className='flex flex-row gap-4'>
-                            <Button medium={true}>Join Now</Button>
-                            <Button fill={false} medium={true}>Our Services</Button>
+                        <div className='absolute top-[23%] w-[255px] h-[255px] bg-yellow-600 rounded-full blur-[200px] z-0 md:right-60 md:top-52 md:w-[400px]
+                        md:h-[400px]'>
                         </div>
                     </div>
-                    <div className='w-1/3 h-full absolute right-60'>
-                        <Image src={Runman} alt="Running man" className='w-[500px] h-[600px] absolute top-20' />
-                    </div>
                 </div>
-                <div className='absolute right-60 top-52 w-[400px] h-[400px] bg-yellow-600 rounded-full blur-[200px] z-0'>
-                </div>
-            </div>
-        </div>
+            </main>
+        </>
     )
 }
 

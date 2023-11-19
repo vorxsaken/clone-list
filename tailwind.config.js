@@ -7,6 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(0deg)' },
+          '25%': {transform: 'rotate(-20deg)'},
+          '50%': {transform: 'rotate(20deg)'},
+          '75%': {transform: 'rotate(-5deg)'},
+          '100%': {transform: 'rotate(5deg)'},
+        }
+      },
+      animation: {
+        'wiggle': 'wiggle 0.5s linear',
+      },
       colors: {
         brown: {
           400: '#704F4F',
@@ -18,6 +30,10 @@ module.exports = {
           400: '#212121',
           500: '#181818'
         }
+      },
+      fontFamily: {
+        'paytone-one': ['Rubik Mono One'],
+        'bungee': ['Bungee']
       }
     },
   },

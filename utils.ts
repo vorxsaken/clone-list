@@ -1,11 +1,17 @@
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
 import { listPage } from "./assets/listPage";
+import clsx, { ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 var centerAnimation = gsap.timeline({ paused: true });
 var cardAnimation = gsap.timeline({ paused: true });
 var cardToggle = gsap.timeline({ paused: true });
 var listPageLength = listPage.length;
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
+}
 
 function setZIndex(id: any) {
     for (let i = 0; i < listPageLength; i++) {
