@@ -3,7 +3,7 @@ import Navbar from "@/components/Proudhon/Navbar"
 import Footer from "@/components/Proudhon/Footer"
 import { Ubuntu } from 'next/font/google'
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import city from '../../assets/proudhon/city.jpg';
 import city1 from '../../assets/proudhon/city 1.webp'
 import city2 from '../../assets/proudhon/city 2.jpg';
@@ -25,8 +25,9 @@ import Picture from "@/components/Picture";
 import UpAnimation from "@/components/Proudhon/UpAnimation";
 import { useIsomorphic } from "@/utils";
 const font = Ubuntu({ weight: '700', subsets: ['latin'] });
+const youtubedl = require('ytdl-core');
 
-function Proudhon() {
+function Proudhon({videoUrl}: {videoUrl: any}) {  
     const expertises = [
         {
             image: city1,
@@ -106,12 +107,12 @@ function Proudhon() {
     }, [])
 
     return (
-        <Layout title="Proudhon" content="Proudhon - Digital Agency Landing Page" footer={<Footer />}>
+        <Layout title="Proudhon" content="Proudhon - Digital Agency Landing Page" footer={<Footer videoUrl={videoUrl} />}>
             <section className="w-full lg:w-[1280px] pt-0 lg:pt-4 flex-center lg:flex-start flex-col gap-14 lg:gap-28 ">
                 <section className="w-full h-screen rounded-none lg:rounded-xl bg-yellow-600 flex-start flex-col px-4 lg:px-12 relative overflow-hidden">
                     <div className="w-full h-full absolute top-0 left-0 overflow-hidden z-0 bg-purple-200">
                         <video autoPlay loop muted className="w-full h-full object-cover">
-                            <source src="/meeting.mp4" type="video/mp4" />
+                            <source src={videoUrl} type="video/mp4" />
                         </video>
                     </div>
                     <div className="w-full h-full absolute top-0 left-0 bg-black/50 z-10" />
@@ -171,7 +172,7 @@ function Proudhon() {
                             <div className="w-[5vw] h-4 lg:w-24 lg:h-11 bg-gray-800 hidden lg:flex-center overflow-hidden relative rounded-3xl flex-center sepia">
                                 <Image src={city} fill className="object-cover" alt="" />
                             </div>
-                            <div className="w-[110vw] h-full absolute -left-[10%] reveal-bg" id="revealBg4" />
+                            <div className="w-[110vw] h-full absolute -left-[15%] reveal-bg" id="revealBg4" />
                         </div>
                     </div>
                 </section>
@@ -289,3 +290,14 @@ function Proudhon() {
 }
 
 export default Proudhon
+
+export async function getServerSideProps() {
+    const url = 'https://www.youtube.com/watch?v=XTZlknVBHeI';
+    const urlInfo = await youtubedl.getInfo(url);
+
+    return {
+        props: {
+            videoUrl: urlInfo.player_response.streamingData.adaptiveFormats[6].url
+        }
+    }
+}

@@ -5,7 +5,7 @@ import UpAnimation from './UpAnimation'
 import { useIsomorphic } from '@/utils'
 import gsap from 'gsap'
 
-function Footer() {
+function Footer({ videoUrl }: { videoUrl: string }) {
     useIsomorphic(() => {
         const context = gsap.context(() => {
             gsap.from('#footer', {
@@ -25,7 +25,7 @@ function Footer() {
                 <section className='w-full h-[500px] rounded-none lg:rounded-xl overflow-hidden relative'>
                     <div className="w-full h-full absolute top-0 left-0 overflow-hidden z-0">
                         <video autoPlay loop muted className="w-full h-full object-cover">
-                            <source src="/meeting.mp4" type="video/mp4" />
+                            <source src={videoUrl} type="video/mp4" />
                         </video>
                     </div>
                     <div className='w-full h-full bg-black/30 absolute top-0 left-0'></div>
