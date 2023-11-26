@@ -27,7 +27,7 @@ import { useIsomorphic } from "@/utils";
 const font = Ubuntu({ weight: '700', subsets: ['latin'] });
 const youtubedl = require('ytdl-core');
 
-function Proudhon({videoUrl}: {videoUrl: any}) {  
+function Proudhon({ videoUrl, videoUrl2 }: { videoUrl: string, videoUrl2: string }) {
     const expertises = [
         {
             image: city1,
@@ -107,7 +107,7 @@ function Proudhon({videoUrl}: {videoUrl: any}) {
     }, [])
 
     return (
-        <Layout title="Proudhon" content="Proudhon - Digital Agency Landing Page" footer={<Footer videoUrl={videoUrl} />}>
+        <Layout title="Proudhon" content="Proudhon - Digital Agency Landing Page" footer={<Footer videoUrl={videoUrl2} />}>
             <section className="w-full lg:w-[1280px] pt-0 lg:pt-4 flex-center lg:flex-start flex-col gap-14 lg:gap-28 ">
                 <section className="w-full h-screen rounded-none lg:rounded-xl bg-yellow-600 flex-start flex-col px-4 lg:px-12 relative overflow-hidden">
                     <div className="w-full h-full absolute top-0 left-0 overflow-hidden z-0 bg-purple-200">
@@ -293,11 +293,15 @@ export default Proudhon
 
 export async function getServerSideProps() {
     const url = 'https://www.youtube.com/watch?v=XTZlknVBHeI';
+    const url2 = 'https://www.youtube.com/watch?v=C2V8-4owXxc';
     const urlInfo = await youtubedl.getInfo(url);
+    const urlInfo2 = await youtubedl.getInfo(url2);
 
     return {
         props: {
-            videoUrl: urlInfo.player_response.streamingData.adaptiveFormats[6].url
+            videoUrl: urlInfo.player_response.streamingData.adaptiveFormats[4].url,
+            videoUrl2: urlInfo2.player_response.streamingData.adaptiveFormats[1].url,
+
         }
     }
 }
