@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Layout from '@/components/Brando/Layout'
+import Layout from '@/components/Layout'
 import Image from 'next/image'
 import PersonWithSnacks from '../../assets/brando/person-with-snacks.jpg';
 import meiji from '../../assets/brando/meiji.svg';
@@ -20,6 +20,9 @@ import { RxArrowRight } from 'react-icons/rx';
 import Card from '@/components/Brando/Card';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Navbar from '@/components/Brando/Navbar';
+import Footer from '@/components/Brando/Footer';
+
 type PricingUiType = React.ComponentProps<'div'> & { title: string, price: string, services: string[], gradient?: boolean }
 function PricingCard({ title, price, services, gradient, ...props }: PricingUiType) {
     return (
@@ -123,7 +126,12 @@ function Brando() {
     }, [])
 
     return (
-        <Layout>
+        <Layout
+            title='Brando'
+            content='brando - branding agency mockups, mockups design to code'
+            navBar={<Navbar />}
+            footer={<Footer />}
+        >
             <section className='w-full flex-start flex-col gap-0'>
                 <div className='w-full h-screen md:h-[800px] relative flex-start'>
                     <div className='absolute top-0 w-full h-full overflow-hidden'>
