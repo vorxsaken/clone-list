@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useLayoutEffect } from "react";
 import { listPage } from "./assets/listPage";
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -147,4 +147,6 @@ const useMediaQuery = (query: string) => {
     return matches as boolean;
 }
 
-export { animateToCenter, animateCardLayer, animateCardToggle, useMediaQuery }
+const useIsomorphic = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+export { animateToCenter, animateCardLayer, animateCardToggle, useMediaQuery, useIsomorphic }

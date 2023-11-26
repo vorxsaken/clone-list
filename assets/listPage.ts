@@ -1,7 +1,8 @@
 import fittness from './image/fitness.webp';
-import butusic from '../assets/image/Butusic.webp';
-import chainCast from '../assets/image/chaincast.webp';
-import brando from '../assets/image/brando.png';
+import butusic from './image/Butusic.webp';
+import chainCast from './image/chaincast.webp';
+import brando from './image/brando.png';
+import proudhon from './image/proudhon.jpg';
 
 export const listPage =
     [
@@ -38,4 +39,13 @@ export const listPage =
             designLink: 'https://dribbble.com/shots/20901340-Fitness-Landing-Page-Design',
             image: fittness
         },
+        {
+            id: 4,
+            title: 'Proudhon - Digital Agency Landing Page',
+            subtitle: `This is landing page i get from dribble, you can check the original design from the link below.`,
+            link: '/proudhon',
+            designLink: 'https://dribbble.com/shots/22235710-Proudhon-Digital-Agency-Landing-Page',
+            image: proudhon
+        },
+        
     ]

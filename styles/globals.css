@@ -58,17 +58,36 @@
     }
   }
 
+  @keyframes scale-x {
+    100% {
+      left: 0%;
+    }
+  }
+
+  .reveal-bg {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(255,255,255,1) 6%, rgba(255,255,255,1) 100%); 
+  }
+
   .animate-wiggle {
     animation: wiggle 1s infinite;
   }
-  
+
+  .animate-scale-x {
+    animation-name: scale-x;
+    animation-duration: 0.6s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.87, 0, .1, 1);
+  }
+
   .gray-filter {
     filter: grayscale(100%);
   }
 
   .gradient-bottom-card {
     transition: all 0.5s ease-in-out;
-    background: linear-gradient(60deg,  white, white, white, white, #fcf3b3, #ffd4ff, #cfedff) var(--x, 0)/200%;
+    background: linear-gradient(60deg, white, white, white, white, #fcf3b3, #ffd4ff, #cfedff) var(--x, 0)/200%;
     background-repeat: no-repeat;
   }
 
