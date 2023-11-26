@@ -6,19 +6,19 @@ import call from '../../assets/brando/call.svg'
 
 export default function Footer() {
     return (
-        <footer className='w-full h-[140vh] md:h-[120vh] flex-end flex-col relative'>
-            <div className='w-full h-[115vh] md:h-[70vh] bg-white flex-end px-2 md:px-32 relative'>
+        <footer className='w-full h-[1200px] md:h-[120vh] flex-end flex-col relative'>
+            <div className='w-full h-[1000px] md:h-[70vh] bg-white flex-end px-2 md:px-32 relative'>
                 <div className='absolute -top-44 left-[7%] md:left-[15%]'>
                     <Card
                         title='Lets Branding your Product'
                         subtitle='Add the value to your brand to scale your bussiness now'
-                        className='w-[90vw] md:w-[70vw] h-[24vh] md:h-[40vh] absolute z-20'
+                        className='w-[90vw] md:w-[70vw] h-[230px] md:h-[40vh] absolute z-20'
                         row
                     />
                     <Card
                         title='Lets Branding your Product'
                         subtitle='Add the value to your brand to scale your bussiness now'
-                        className='w-[90vw] md:w-[70vw] h-[24vh] md:h-[40vh] absolute z-40'
+                        className='w-[90vw] md:w-[70vw] h-[230px] md:h-[40vh] absolute z-40'
                         row
                         coverImage={call}
                         noBackground={false}
@@ -69,7 +69,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className='flex-center w-full border-t-2 border-white py-6 text-xs'>
+                    <div className='flex-center w-full border-t-2 border-white py-6 text-xs text-center'>
                         Copyright Odama Studio 2022 design by millarta code by alfahmi
                     </div>
                 </div>
